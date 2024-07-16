@@ -8,12 +8,20 @@ jobs:
         steps:
             - name: Chekout Repo
               uses: actions/checkout@v4
-            - name: Welcome Message
-              run: echo "My First Workflow Job"
+            
+            - name: List and Read file
+              run: |
+                 echo "My First Workflow Job"
+                 ls -ltra
+                 cat README.md
 
-            - name: List Files
-              run: ls -ltr
+            - name: Generate ASCII Artwork
+              run: cowsay -f Tiger "Run away my Boy, I'm the Mighty TIGER....ROAR" >> Tiger.txt
 
-            - name: Read file
-              run: cat README.md
+
+            # - name: List Files
+            #   run: ls -ltr
+
+            # - name: Read file
+            #   run: cat README.md
 
