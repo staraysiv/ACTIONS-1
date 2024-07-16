@@ -13,7 +13,7 @@ jobs:
               run: sudo apt-get install cowsay -y
 
             - name: Generate ASCII Artwork
-              run: cowsay -f Elephant "Run away my Boy, I'm the Mighty Elephant....ROAR" >> Elephant.txt
+              run: cowsay -f Elephant "Run away my Boy, I'm the Mighty Elephant....TRUMMM" >> Elephant.txt
             
             - name: Test file exists
               run: grep -i "Elephant" Elephant.txt
