@@ -13,13 +13,13 @@ jobs:
               run: sudo apt-get install cowsay -y
 
             - name: Generate ASCII Artwork
-              run: cowsay -f Tiger "Run away my Boy, I'm the Mighty TIGER....ROAR" >> Tiger.txt
+              run: cowsay -f Elephant "Run away my Boy, I'm the Mighty Elephant....ROAR" >> Elephant.txt
             
             - name: Test file exists
-              run: grep -i "Tiger" Tiger.txt
+              run: grep -i "Elephant" Elephant.txt
             
-            - name: Read Tiger File
-              run: cat Tiger.txt
+            - name: Read Elephant File
+              run: cat Elephant.txt
 
             - name: List Repo Files
               run: ls -ltra
