@@ -9,17 +9,10 @@ jobs:
             - name: Chekout Repo
               uses: actions/checkout@v4
             
-            - name: Install Cowsay Program
-              run: sudo apt-get install cowsay -y
-
-            - name: Generate ASCII Artwork
-              run: cowsay -f elephant "Run away my Boy, I'm the Mighty Elephant....TRUMMM" >> Elephant.txt
-            
-            - name: Test file exists
-              run: grep -i "Elephant" Elephant.txt
-            
-            - name: Read Elephant File
-              run: cat Elephant.txt
-
             - name: List Repo Files
               run: ls -ltra
+            
+            - name: Execute shell script ascii-script under the workflow
+              run: ./ascii-script.sh
+
+          
